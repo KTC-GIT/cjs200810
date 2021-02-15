@@ -10,30 +10,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <div style="text-align:center;">
-  	<h2>금주의 인기게임</h2>
-  </div>
 <!-- Automatic Slideshow Images -->
-  <div class="w3-left arrow left" style="vertical-align:center;">
-  	<div><img src="${contextpath}/resources/icon/left_arrow.png" style="width:50px;"/></div>
-  </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="${contextpath}/resources/gameImg/darksoul.jpg" style="width:40%;height:300px;">
+    <img src="/w3images/la.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="${contextpath}/resources/gameImg/iceborne.jpg" style="width:40%;height:300px;">
+    <img src="/w3images/ny.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="${contextpath}/resources/gameImg/xcom-2-cover.jpg" style="width:40%;height:300px;">
+    <img src="/w3images/chicago.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
     </div>
-  </div>
-  <div class="w3-right arrow right" style="vertical-align:center;">
-  	<div><img src="${contextpath}/resources/icon/right_arrow.png" style="width:50px;"/></div>
   </div>
   <script>
 	// Automatic Slideshow - change image every 4 seconds
@@ -52,6 +49,23 @@
 	  setTimeout(carousel, 4000);    
 	}
 	
+	// Used to toggle the menu on small screens when clicking on the menu button
+	function myFunction() {
+	  var x = document.getElementById("navDemo");
+	  if (x.className.indexOf("w3-show") == -1) {
+	    x.className += " w3-show";
+	  } else { 
+	    x.className = x.className.replace(" w3-show", "");
+	  }
+	}
+	
+	// When the user clicks anywhere outside of the modal, close it
+	var modal = document.getElementById('ticketModal');
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+	  }
+	}
 	</script>
 </body>
 </html>
