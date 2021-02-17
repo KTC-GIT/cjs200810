@@ -18,4 +18,14 @@ public class MemberController {
 	public String loginPost() {
 		return "main/main";
 	}
+	
+	@RequestMapping("/join")
+	public String joinGet() {
+		return "member/createAccount";
+	}
+	
+	@RequestMapping(value="/join",method=RequestMethod.POST)
+	public String joinPost() {
+		return "member/createAccount";
+	}
 }
