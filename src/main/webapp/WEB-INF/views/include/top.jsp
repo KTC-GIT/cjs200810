@@ -7,17 +7,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
 <%@include file="/WEB-INF/views/include/bs.jsp"%>
+<style>
+	a{
+		text-decoration:none;
+	}
+</style>
 </head>
 <body>
-<div class="w3-content w3-center" style="max-width:800px;">
+<div class="w3-content" style="max-width:2000px;height:100px;color:#aaaaaa;background-color:#3c3c3c;">
 	<div class="w3-right">
-		<a href = "javascript:void(0)">로그인</a> | <a href = "javascript:void(0)">회원가입</a> 
+		<a href = "javascript:void(0)">로그인</a> &nbsp; <a href = "javascript:void(0)">회원가입</a> 
 	</div>
-	<p><br/></p>
 	<div class="w3-left">
-		<img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/>
+		<a href="${contextpath}/main"><img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/></a>
 	</div>
 </div>
 </body>
