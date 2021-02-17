@@ -14,23 +14,25 @@
 <%@include file="/WEB-INF/views/include/nav.jsp" %>
 
 <div class="w3-content">
-	<table>
-		<tr>
-			<td><input type="text" name="id" id="id" class="w3-input w3-opacity" size="20" placeholder="아이디"/></td>
-		</tr>
-		<tr>
-			<td><input type="password" name="pw" id="pw" class="w3-input w3-opacity" size="20" placeholder="비밀번호"/></td>
-		</tr>
-		<tr>
-			<td><input type="button" value="로그인" size="20" id="submitBtn" class="w3-button w3-blue"/></td>
-		</tr>
-		<tr>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-		</tr>
-	</table>
+	<form method="post">
+		<table>
+			<tr>
+				<td><input type="text" name="id" id="id" class="w3-input w3-opacity" size="20" placeholder="아이디"/></td>
+			</tr>
+			<tr>
+				<td><input type="password" name="pw" id="pw" class="w3-input w3-opacity" size="20" placeholder="비밀번호"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="로그인" size="20" id="submitBtn" class="w3-button w3-blue"/></td>
+			</tr>
+			<tr>
+				<td>아이디가 없으시다면? <a href="${contextpath}/member/join">회원가입</a></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	</form>
 </div>
 
 <%@include file="/WEB-INF/views/include/footer.jsp" %>

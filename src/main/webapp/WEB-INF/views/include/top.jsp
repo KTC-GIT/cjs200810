@@ -17,7 +17,7 @@
 <body>
 <div class="w3-content" style="max-width:2000px;height:100px;color:#aaaaaa;background-color:#3c3c3c;">
 	<div class="w3-right">
-		<a href = "javascript:void(0)">로그인</a> &nbsp; <a href = "javascript:void(0)">회원가입</a> 
+		<a href = "${contextpath}/member/login">로그인</a> &nbsp; <a href = "${contextpath}/member/join">회원가입</a> 
 	</div>
 	<div class="w3-left">
 		<a href="${contextpath}/main"><img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/></a>
