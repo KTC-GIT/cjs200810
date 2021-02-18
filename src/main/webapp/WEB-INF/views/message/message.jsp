@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <script>
 	alert("${msg}");
-	location.href="${url}";
+	location.href="${contextpath}/${url}";
 </script>
 </head>
 

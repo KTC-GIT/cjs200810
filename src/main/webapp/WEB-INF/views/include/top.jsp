@@ -15,12 +15,14 @@
 </style>
 </head>
 <body>
-<div class="w3-content" style="max-width:2000px;height:100px;color:#aaaaaa;background-color:#3c3c3c;">
-	<div class="w3-right">
-		<a href = "${contextpath}/member/login">로그인</a> &nbsp; <a href = "${contextpath}/member/join">회원가입</a> 
-	</div>
-	<div class="w3-left">
-		<a href="${contextpath}/main"><img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/></a>
+<div class="w3-content" style="max-width:2000px;height:100px;color:#aaaaaa;background-color:#282828;">
+	<div class="w3-content" style="max-width:800px;">
+		<div class="w3-right" style="padding-top:5px;">
+			<a href = "${contextpath}/member/login">로그인</a> &nbsp; <a href = "${contextpath}/member/join">회원가입</a> 
+		</div>
+		<div class="w3-left">
+			<a href="${contextpath}/main"><img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/></a>
+		</div>
 	</div>
 </div>
 </body>

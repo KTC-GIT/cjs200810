@@ -12,9 +12,11 @@ public class MessageController {
 	@RequestMapping("/{msgflag}")
 	public String msgflag(@PathVariable String msgflag,Model model) {
 		
-		if(msgflag.equals("")) {
-			
+		if(msgflag.equals("joinOk")) {
+			model.addAttribute("msg", "회원가입이 완료되었습니다");
+			model.addAttribute("url", "main");
 		}
+		
 		return "message/message";
 	}
 }

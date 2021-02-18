@@ -24,5 +24,14 @@
 	<context:component-scan base-package="com.spring.cjs200810" />
 	
 	
+	<!-- for password encoding -->
+	<beans:bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></beans:bean>
+	
+	
+	<!-- for fileupload(limit file size) -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10485760"/>	<!-- 1024*1024*10 -->
+		<beans:property name="defaultEncoding" value="utf-8"/>
+	</beans:bean>
 	
 </beans:beans>

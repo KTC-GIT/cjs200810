@@ -23,25 +23,25 @@ body {font-family: "Lato", sans-serif}
   <%@include file="/WEB-INF/views/include/slide.jsp" %>
 
   <!-- column Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px;padding:40px;" id="band">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px;padding:40px;">
     <div class="w3-row w3-padding-32">
    	<h2 class="w3-wide" style="text-align:center;">이번 주의 칼럼들</h2>
    	<p><br/></p>
       <div class="w3-third">
       	<a href="javascript:void(0)">
-	        <h4>진정한 다크판타지를 느끼고 싶다면..</h4>
+	        <h6>진정한 다크판타지를 느끼고 싶다면..</h6>
 	        <img src="${contextpath}/resources/gameImg/darksoul.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%;">
         </a>
       </div>
       <div class="w3-third">
       	<a href="javascript:void(0)">
-	        <h4>커다란 몬스터와의 사투!</h4>
+	        <h6>커다란 몬스터와의 사투!</h6>
 	        <img src="${contextpath}/resources/gameImg/iceborne.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%;">
 	    </a>
       </div>
       <div class="w3-third">
       	<a href="javascript:void(0)">
-	        <h4>99%인데도 빗나간다고??</h4>
+	        <h6>99%인데도 빗나간다고??</h6>
 	        <img src="${contextpath}/resources/gameImg/xcom-2-cover.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%;">
 	    </a>
       </div>
