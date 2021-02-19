@@ -24,7 +24,7 @@ public class MemberController {
 	
 	@RequestMapping("/join")
 	public String joinGet() {
-		return "member/createAccount";
+		return "member/authentificationEmail";
 	}
 	
 	@RequestMapping(value="/join",method=RequestMethod.POST)

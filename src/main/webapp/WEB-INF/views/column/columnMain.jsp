@@ -10,8 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="/WEB-INF/views/include/top.jsp"%>
 <%@include file="/WEB-INF/views/include/nav.jsp" %>
-<%@include file="/WEB-INF/views/include/slide.jsp" %>
 
 <%@include file="/WEB-INF/views/include/footer.jsp" %>
 </body>
