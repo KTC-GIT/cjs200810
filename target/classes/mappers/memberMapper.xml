@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.spring.cjs200810.dao.MemberDao">
-	
+	<insert id="insertMember">
+		insert into member(id,pw,nick,email,authkey) values(#{vo.id},#{vo.pw},#{vo.nick},#{vo.email},#{vo.authkey});
+	</insert>
+	<select id="selectIdxDesc" resultType="_int">
+		select idx from member order by idx desc limit 0, 1;
+	</select>
+	<select id="countByIdxAndAuthkey" resultType="_int">
+		select count(*) from member where idx=#{idx} and authkey=#{authkey};
+	</select>
+	<update id="updateAuthStatus">
+		update member set authStatus = 1 where idx=#{idx} and authkey=#{authkey};
+	</update>
 </mapper>
