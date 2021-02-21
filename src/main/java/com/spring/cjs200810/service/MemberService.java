@@ -12,4 +12,11 @@ public interface MemberService {
 
 	public void updateAuthStatus(String creationid, String authkey);
 
+	public MemberVo selectById(String id);
+
+	public void updateLastLogin(String id);
+
+	public int countById(String id);
+
+
 }

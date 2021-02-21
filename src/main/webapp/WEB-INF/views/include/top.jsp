@@ -17,9 +17,18 @@
 <body>
 <div class="w3-content" style="max-width:2000px;height:100px;color:#aaaaaa;background-color:#282828;">
 	<div class="w3-content" style="max-width:800px;">
-		<div class="w3-right" style="padding-top:5px;">
-			<a href = "${contextpath}/member/login">로그인</a> &nbsp; <a href = "${contextpath}/member/join">회원가입</a> 
-		</div>
+		<c:choose>
+		<c:when test="${id==null}">
+			<div class="w3-right" style="padding-top:5px;">
+				<a href = "${contextpath}/member/login">로그인</a> &nbsp; <a href = "${contextpath}/member/join">회원가입</a> 
+			</div>
+		</c:when>
+		<c:otherwise>
+			<div class="w3-right" style="padding-top:5px;">
+				<a href = "${contextpath}/member/mypage">${nick}</a>님 &nbsp; <a href = "${contextpath}/member/logout">로그아웃</a> 
+			</div>
+		</c:otherwise>
+		</c:choose>
 		<div class="w3-left">
 			<a href="${contextpath}/main"><img src="${contextpath}/resources/icon/logo.png" alt="logo" width="100px"/></a>
 		</div>

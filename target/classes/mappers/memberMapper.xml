@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.spring.cjs200810.dao.MemberDao">
 	<insert id="insertMember">
-		insert into member(id,pw,nick,email,authkey) values(#{vo.id},#{vo.pw},#{vo.nick},#{vo.email},#{vo.authkey});
+		insert into member (id,pw,nick,email,authkey) values (#{vo.id},#{vo.pw},#{vo.nick},#{vo.email},#{vo.authkey});
 	</insert>
 	<select id="selectIdxDesc" resultType="_int">
 		select idx from member order by idx desc limit 0, 1;
@@ -13,4 +13,13 @@
 	<update id="updateAuthStatus">
 		update member set authStatus = 1 where idx=#{idx} and authkey=#{authkey};
 	</update>
+	<select id="selectById" resultType="com.spring.cjs200810.vo.MemberVo">
+		select * from member where id = #{id};
+	</select>
+	<update id="updateLastLogin">
+		update member set lastLogin = now() where id=#{id};
+	</update>
+	<select id="countById" resultType="_int">
+		select count(*) from member where id=#{id};
+	</select>
 </mapper>

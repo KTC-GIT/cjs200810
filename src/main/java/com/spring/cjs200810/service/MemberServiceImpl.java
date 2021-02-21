@@ -35,4 +35,23 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 
+	@Override
+	public MemberVo selectById(String id) {
+		
+		return mDao.selectById(id);
+	}
+
+	@Override
+	public void updateLastLogin(String id) {
+		mDao.updateLastLogin(id);
+		
+	}
+
+	@Override
+	public int countById(String id) {
+		
+		return mDao.countById(id);
+	}
+
+
 }

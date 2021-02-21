@@ -8,6 +8,14 @@
 <head>
 <meta charset="UTF-8">
 <title>로 그 인</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#submitBtn").on("click",function(){
+			$("#loginForm").submit();
+		});
+	});
+</script>
 <style>
 	.btn{
 		background:none;
@@ -30,7 +38,7 @@
 
 <div class="w3-content w3-padding-64" style="max-width:2000px;background-color:#5a5a5a;">
 	<div style="padding-top:100px;"></div>
-	<form method="post">
+	<form id="loginForm" method="post">
 		<table style="margin-left:auto;margin-right:auto;">
 			<tr>
 				<td colspan="2"><input type="text" name="id" id="id" class="w3-input w3-opacity" placeholder="이메일" style="padding:20px;font-size:20px;border-radius: 5px;"/></td>

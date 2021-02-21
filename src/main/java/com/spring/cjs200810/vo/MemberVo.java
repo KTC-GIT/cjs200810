@@ -18,8 +18,7 @@ public class MemberVo {
 	private int level;
 	private int activation;
 	private String authkey;
-	private int authOrNot;
-	
+	private int authStatus;
 	
 	public int getIdx() {
 		return idx;
@@ -81,11 +80,11 @@ public class MemberVo {
 	public void setAuthkey(String authkey) {
 		this.authkey = authkey;
 	}
-	public int getAuthOrNot() {
-		return authOrNot;
+	public int getAuthStatus() {
+		return authStatus;
 	}
-	public void setAuthOrNot(int authOrNot) {
-		this.authOrNot = authOrNot;
+	public void setAuthStatus(int authStatus) {
+		this.authStatus = authStatus;
 	}
 	
 	

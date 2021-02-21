@@ -14,4 +14,11 @@ public interface MemberDao {
 
 	public void updateAuthStatus(@Param("idx") String creationid,@Param("authkey") String authkey);
 
+	public MemberVo selectById(@Param("id") String id);
+
+	public void updateLastLogin(@Param("id") String id);
+
+	public int countById(@Param("id") String id);
+
+
 }
