@@ -8,7 +8,7 @@
 		select idx from member order by idx desc limit 0, 1;
 	</select>
 	<select id="countByIdxAndAuthkey" resultType="_int">
-		select count(*) from member where idx=#{idx} and authkey=#{authkey};
+		select count(*) from member where idx=#{idx} and authkey=#{authkey} and authStatus=0;
 	</select>
 	<update id="updateAuthStatus">
 		update member set authStatus = 1 where idx=#{idx} and authkey=#{authkey};
@@ -22,4 +22,7 @@
 	<select id="countById" resultType="_int">
 		select count(*) from member where id=#{id};
 	</select>
+	<update id="updateNick">
+		update member set nick=#{tagNick} where id=#{id};
+	</update>
 </mapper>

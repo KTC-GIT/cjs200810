@@ -53,5 +53,10 @@ public class MemberServiceImpl implements MemberService {
 		return mDao.countById(id);
 	}
 
+	@Override
+	public void updateNick(String tagNick,String id) {
+		mDao.updateNick(tagNick,id);
+	}
+
 
 }

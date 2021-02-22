@@ -20,5 +20,7 @@ public interface MemberDao {
 
 	public int countById(@Param("id") String id);
 
+	public void updateNick(@Param("tagNick") String tagNick,@Param("id") String id);
+
 
 }

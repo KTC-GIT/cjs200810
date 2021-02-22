@@ -40,6 +40,22 @@ public class MessageController {
 			model.addAttribute("msg", "중복된 아이디입니다.");
 			model.addAttribute("url", "member/join");
 		}
+		else if(msgflag.equals("level0")) {
+			model.addAttribute("msg", "관리자만 사용이 가능합니다.");
+			model.addAttribute("url", "main");
+		}
+		else if(msgflag.equals("level1")) {
+			model.addAttribute("msg", "칼럼 작성자 이상만 사용이 가능합니다.");
+			model.addAttribute("url", "main");
+		}
+		else if(msgflag.equals("level2")) {
+			model.addAttribute("msg", "정회원 이상만 사용이 가능합니다.");
+			model.addAttribute("url", "main");
+		}
+		else if(msgflag.equals("level3")) {
+			model.addAttribute("msg", "준회원 이상만 사용이 가능합니다.");
+			model.addAttribute("url", "main");
+		}
 		
 		return "message/message";
 	}

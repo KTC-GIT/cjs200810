@@ -18,5 +18,7 @@ public interface MemberService {
 
 	public int countById(String id);
 
+	public void updateNick(String tagNick,String id);
+
 
 }

@@ -98,6 +98,8 @@ public class MemberController {
 			
 			mService.insertMember(vo);
 			int creationid = mService.selectIdxDesc();
+			String tagNick = vo.getNick()+"#"+creationid;
+			mService.updateNick(tagNick,vo.getId());
 			redirectAttr.addAttribute("email",vo.getEmail());
 			redirectAttr.addAttribute("authkey", vo.getAuthkey());
 			redirectAttr.addAttribute("creationid", creationid);
@@ -128,6 +130,11 @@ public class MemberController {
 		return location;
 	}
 	
+	@RequestMapping("/mypage")
+	public String mypageGet() {
+		
+		return "member/mypage";
+	}
 	
 	
 }

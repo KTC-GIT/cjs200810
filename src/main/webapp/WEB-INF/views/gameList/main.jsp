@@ -12,7 +12,9 @@
 <body>
 <%@include file="/WEB-INF/views/include/top.jsp"%>
 <%@include file="/WEB-INF/views/include/nav.jsp" %>
-
+<div class="w3-content" style="max-width:2000px;">
+	
+</div>
 <%@include file="/WEB-INF/views/include/footer.jsp" %>
 </body>
 </html>

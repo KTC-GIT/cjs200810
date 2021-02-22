@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.cjs200810.dao.GameListDao">
+	<select id="selectGameList" resultType="com.spring.cjs200810.vo.GameListVo">
+		select * from gameList limit #{sPage},#{limit};
+	</select>
+	<select id="countGameList" resultType="_int">
+		select count(*) from gameList;
+	</select>
+</mapper>
