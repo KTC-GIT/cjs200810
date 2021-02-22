@@ -29,6 +29,6 @@ public class GameListController {
 		
 		model.addAttribute("vo", vo);
 		
-		return "gameList/main";
+		return "gameList/columnMain";
 	}
 }
