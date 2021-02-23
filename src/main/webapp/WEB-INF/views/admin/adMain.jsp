@@ -7,12 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>관리자 페이지</title>
 </head>
 <body>
 <%@include file="/WEB-INF/views/include/top.jsp"%>
-<%@include file="/WEB-INF/views/include/nav.jsp" %>
-<div class="w3-content" style="max-width:2000px;">
+<%@include file="/WEB-INF/views/include/nav2.jsp" %>
+<div class="w3-content w3-padding-64" style="max-width:2000px;color:#a0a0a0;background-color:#5a5a5a;">
+	<h2>관리자 페이지입니다.</h2>
 	
 </div>
 <%@include file="/WEB-INF/views/include/footer.jsp" %>

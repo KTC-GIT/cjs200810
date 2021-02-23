@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class GameListVo {
 	private int idx;
+	private String thumb;
 	private String title;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date publishingDate;
@@ -22,6 +23,13 @@ public class GameListVo {
 	}
 	public void setIdx(int idx) {
 		this.idx = idx;
+	}
+	
+	public String getThumb() {
+		return thumb;
+	}
+	public void setThumb(String thumb) {
+		this.thumb = thumb;
 	}
 	public String getTitle() {
 		return title;

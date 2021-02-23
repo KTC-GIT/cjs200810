@@ -14,9 +14,9 @@
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="${contextpath}/main" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="${contextpath}/gameList/gMain" class="w3-bar-item w3-button w3-padding-large w3-hide-small">게임리스트</a>
-    <a href="${contextpath}/column/colMain" class="w3-bar-item w3-button w3-padding-large w3-hide-small">칼럼</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">이번주 추천 게임</a>
+    <a href="${contextpath}/admin/memberList" class="w3-bar-item w3-button w3-padding-large w3-hide-small">회원관리</a>
+    <a href="${contextpath}/admin/gameList" class="w3-bar-item w3-button w3-padding-large w3-hide-small">게임리스트 관리</a>
+    <a href="${contextpath}/admin/columnList" class="w3-bar-item w3-button w3-padding-large w3-hide-small">칼럼관리</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -30,9 +30,9 @@
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">게임리스트</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">칼럼</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">이번주 추천 게임</a>
+  <a href="${contextpath}/admin/memberList" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">회원관리</a>
+  <a href="${contextpath}/admin/gameList" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">게임리스트관리</a>
+  <a href="${contextpath}/admin/columnList" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">칼럼관리</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
 

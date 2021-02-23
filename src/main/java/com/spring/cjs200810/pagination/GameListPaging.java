@@ -1,22 +1,32 @@
 package com.spring.cjs200810.pagination;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.spring.cjs200810.service.GameListService;
 
+@Service
 public class GameListPaging {
-	public int limit=10;
-	public int listLimit=5;
-	public int total = getTotal();
-	public int blockSize = getBlockSize();
 	
+	@Autowired
 	GameListService gService;
+	
+	
+	public int limit=20;
+	public int listLimit=5;
 	
 	
 	public int getTotal() {
 		return gService.countGameList();
 	}
+	public int getPageSize() {
+		int pageSize = this.getTotal()%limit==0?this.getTotal()/limit:(this.getTotal()/limit)+1;
+		return pageSize;
+	}
 	
 	public int getBlockSize() {
-		int block = total%(limit*listLimit)==0?total/(limit*listLimit):(total/(limit*listLimit))+1;
+		int block = this.getTotal()%(limit*listLimit)==0?this.getTotal()/(limit*listLimit):(this.getTotal()/(limit*listLimit))+1;
 		return block; 
 	}
+	
 }

@@ -1,11 +1,18 @@
 package com.spring.cjs200810;
 
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.cjs200810.pagination.GameListPaging;
 import com.spring.cjs200810.service.GameListImgService;
 import com.spring.cjs200810.service.GameListService;
 import com.spring.cjs200810.vo.GameListVo;
@@ -17,18 +24,27 @@ public class GameListController {
 	GameListService gService;
 	@Autowired
 	GameListImgService gImgService;
+	@Autowired
+	GameListPaging gp;
 	
-	@RequestMapping("/main")
-	public String mainGet(@RequestParam String startPage, Model model) {
-		if(startPage==null){
-			startPage="0";
-		}
-		int sPage = Integer.parseInt(startPage);
-		int limit = 10;
-		GameListVo vo = gService.selectGameList(sPage,limit);
+	@RequestMapping("/gMain")
+	public String mainGet(Model model,HttpServletRequest request) throws ServletException,IOException{
+		request.setCharacterEncoding("utf-8");
 		
-		model.addAttribute("vo", vo);
+		int startPage = request.getParameter("startPage")==null?1:Integer.parseInt(request.getParameter("startPage"));
+		int block = request.getParameter("block")==null?1:Integer.parseInt(request.getParameter("block"));
+		int limit = gp.limit;
+		int total = gp.getTotal();
+		int blockSize = gp.getBlockSize();
+		int pageSize = gp.getPageSize();
+		int start = (startPage-1)*limit>total?total:(startPage-1)*limit;
+		List<GameListVo> list = gService.selectGameList(start,limit);
 		
-		return "gameList/columnMain";
+		model.addAttribute("vo", list);
+		model.addAttribute("blockSize", blockSize);
+		model.addAttribute("block", block);
+		model.addAttribute("pageSize", pageSize);
+		
+		return "gameList/gMain";
 	}
 }
