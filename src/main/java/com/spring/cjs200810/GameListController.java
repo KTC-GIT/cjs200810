@@ -47,4 +47,10 @@ public class GameListController {
 		
 		return "gameList/gMain";
 	}
+	
+	@RequestMapping("/addList")
+	public String addListGet() {
+		
+		return "gameList/addList";
+	}
 }

@@ -33,6 +33,14 @@
 				</tr>
 			</c:otherwise>
 		</c:choose>
+		<tr>
+			<td style="padding-bottom:50px;                            22222222222222222222222"></td>
+		</tr>
+		<c:if test="${id=='admin'}">
+			<tr>
+				<td style="text-align:right;"><a href="${contextpath}/gameList/addList"><button class="w3-button w3-blue">리스트 등록하기</button></a></td>
+			</tr>
+		</c:if>
 	</table>
 	<div style="padding-top:500px;"></div>
 </div>
