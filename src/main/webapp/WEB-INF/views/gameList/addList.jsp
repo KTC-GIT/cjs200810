@@ -9,13 +9,13 @@
 <meta charset="UTF-8">
 <title>게임 추가</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/resources/ckeditor/ckeditor.js"></script>
+<script src="${contextpath}/resources/ckeditor/ckeditor.js"></script>
 <script>
 	$(document).ready(function(){
 		CKEDITOR.replace('content',{
+			filebrowserUploadUrl:'${contextpath}/file/gameListImgUpload',
 			width:'600px',
-			height:'700px',
-			filebrowserUploadUrl:'${contextpath}/file/gameListImgUpload'
+			height:'700px'
 		});
 	});
 </script>
